@@ -399,9 +399,17 @@
 
     .packages-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      max-width: 1000px;
+      max-width: 1400px;
+    }
+
+    @media (max-width: 900px) {
+      .packages-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 560px) {
+      .packages-grid { grid-template-columns: 1fr; }
     }
 
     .package-card {
