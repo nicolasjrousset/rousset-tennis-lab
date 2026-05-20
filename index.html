@@ -480,6 +480,54 @@
       margin-bottom: 20px;
     }
 
+    .package-desc {
+      font-size: 13px;
+      color: var(--white-45);
+      line-height: 1.55;
+      margin-bottom: 18px;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .package-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .package-features li {
+      font-size: 12px;
+      color: var(--white-45);
+      line-height: 1.45;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .package-features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 5px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .package-features li strong {
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    .package-includes {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white-28);
+      margin-bottom: 10px;
+    }
+
     .package-cta {
       margin-top: auto;
       display: inline-block;
@@ -995,38 +1043,79 @@
 
       <div class="packages-grid">
 
-        <a class="package-card reveal" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/basic-service-tsr6b">
+        <!-- ESSENTIAL -->
+        <div class="package-card reveal">
           <div class="package-name">Match Analysis</div>
-          <div class="package-name" style="font-size:15px;font-family:'DM Sans',sans-serif;font-weight:300;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;font-size:11px;">Essential</div>
+          <div style="font-size:11px;font-weight:500;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:2px;text-transform:uppercase;">Essential</div>
           <div class="package-price"><sup>$</sup>99</div>
+          <div class="package-desc">For competitive players who want structured, professional feedback.</div>
           <div class="package-divider"></div>
+          <div class="package-includes">Includes</div>
+          <ul class="package-features">
+            <li><strong>Full match video review</strong> (up to 90 min)</li>
+            <li>Serve &amp; return breakdown</li>
+            <li>Shot selection &amp; error analysis</li>
+            <li>3–5 key improvement priorities</li>
+            <li>Written feedback summary (PDF)</li>
+            <li><strong>72-hour turnaround</strong></li>
+          </ul>
           <a class="package-cta" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/basic-service-tsr6b">Get Started →</a>
-        </a>
+        </div>
 
-        <a class="package-card reveal" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/intermediate-service-brsjs">
+        <!-- PERFORMANCE -->
+        <div class="package-card reveal">
           <div class="package-name">Match Analysis</div>
-          <div style="font-size:11px;font-weight:300;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;">Performance</div>
+          <div style="font-size:11px;font-weight:500;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:2px;text-transform:uppercase;">Performance</div>
           <div class="package-price"><sup>$</sup>149</div>
+          <div class="package-desc">For tournament players ready to take their game to the next level.</div>
           <div class="package-divider"></div>
+          <div class="package-includes">Everything in Essential, plus</div>
+          <ul class="package-features">
+            <li>Tactical pattern analysis <strong>(attack, neutral, defense %)</strong></li>
+            <li>Movement &amp; court positioning breakdown</li>
+            <li>Opponent tendencies &amp; how to exploit them</li>
+            <li>Video timestamps with specific clip references</li>
+            <li><strong>48-hour turnaround</strong></li>
+          </ul>
           <a class="package-cta" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/intermediate-service-brsjs">Get Started →</a>
-        </a>
+        </div>
 
-        <a class="package-card featured reveal" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/advanced-service-2za7n">
+        <!-- ELITE -->
+        <div class="package-card featured reveal">
           <div class="package-badge">Most Popular</div>
           <div class="package-name">Match Analysis</div>
-          <div style="font-size:11px;font-weight:300;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;">Elite</div>
+          <div style="font-size:11px;font-weight:500;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:2px;text-transform:uppercase;">Elite</div>
           <div class="package-price"><sup>$</sup>219</div>
+          <div class="package-desc">For serious competitors who want a complete picture of their game.</div>
           <div class="package-divider"></div>
+          <div class="package-includes">Everything in Performance, plus</div>
+          <ul class="package-features">
+            <li>Full statistical match report</li>
+            <li>Mental performance &amp; pressure point analysis</li>
+            <li><strong>Custom game plan</strong> for your next match</li>
+            <li>30-min video call to walk through findings</li>
+            <li><strong>24-hour turnaround</strong></li>
+          </ul>
           <a class="package-cta" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/advanced-service-2za7n">Get Started →</a>
-        </a>
+        </div>
 
-        <a class="package-card reveal" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/advanced-service-1-hldh9">
+        <!-- LAB PRO -->
+        <div class="package-card reveal">
           <div class="package-name">Lab Pro</div>
-          <div style="font-size:11px;font-weight:300;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;">Package</div>
+          <div style="font-size:11px;font-weight:500;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:2px;text-transform:uppercase;">Package</div>
           <div class="package-price"><sup>$</sup>349</div>
+          <div class="package-desc">The full Rousset Tennis Lab experience — for athletes committed to sustained improvement.</div>
           <div class="package-divider"></div>
+          <div class="package-includes">Everything in Elite, plus</div>
+          <ul class="package-features">
+            <li><strong>2 match analyses per month</strong></li>
+            <li>Ongoing progress tracking between sessions</li>
+            <li>Priority email access to Nicolas</li>
+            <li>Monthly development report</li>
+            <li><strong>Tailored training plan</strong> updated each cycle</li>
+          </ul>
           <a class="package-cta" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/advanced-service-1-hldh9">Get Started →</a>
-        </a>
+        </div>
 
       </div>
     </div>
