@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rousset Tennis Lab offers precision match analysis and performance coaching for competitive players. Based in Omaha, NE — coaching worldwide online." />
+  <meta name="keywords" content="tennis coaching Omaha Nebraska, online tennis coaching, match analysis, tennis performance, Rousset Tennis Lab, Nicolas Rousset" />
+  <title>Rousset Tennis Lab | Tennis Performance, Measured Precisely</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C8A96E;
+      --gold-dim: rgba(200,169,110,0.12);
+      --gold-border: rgba(200,169,110,0.28);
+      --dark: #080808;
+      --dark-2: #0f0f0f;
+      --dark-3: #141414;
+      --dark-4: #1a1a1a;
+      --dark-5: #222;
+      --white: #ffffff;
+      --white-65: rgba(255,255,255,0.65);
+      --white-45: rgba(255,255,255,0.45);
+      --white-28: rgba(255,255,255,0.28);
+      --white-15: rgba(255,255,255,0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(8,8,8,0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--dark-4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 17px;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white-45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-book {
+      background: var(--gold) !important;
+      color: var(--dark) !important;
+      font-weight: 600 !important;
+      padding: 8px 16px !important;
+      border-radius: 2px;
+    }
+
+    .nav-book:hover { background: #b8955a !important; }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 60px; left: 0; right: 0; bottom: 0;
+      background: var(--dark);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .mobile-nav.open { display: flex; }
+
+    .mobile-nav a {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      letter-spacing: 3px;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .mobile-nav a:hover { color: var(--gold); }
+
+    .mobile-book {
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase;
+      background: var(--gold) !important;
+      color: var(--dark) !important;
+      padding: 14px 36px !important;
+      border-radius: 2px;
+      margin-top: 8px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 0 60px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.squarespace-cdn.com/content/v1/69854a81addde92b7cd1c5c9/41bd5b3d-8964-4bf1-a518-72be5ab5a6d7/Nico+tennis+court+chat.png');
+      background-size: cover;
+      background-position: center 20%;
+      opacity: 0.38;
+      animation: slowzoom 14s ease-out forwards;
+    }
+
+    @keyframes slowzoom {
+      from { transform: scale(1.08); }
+      to   { transform: scale(1.0); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.97) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 700px;
+      padding: 0 32px;
+      animation: fadeup 0.9s ease both;
+    }
+
+    @keyframes fadeup {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      border-radius: 2px;
+      padding: 6px 14px;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+
+    .hero-badge-text {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(56px, 10vw, 90px);
+      line-height: 0.92;
+      letter-spacing: 1px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .hero-title span { color: var(--gold); }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--white-45);
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 440px;
+      font-weight: 300;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 15px 32px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: #b8955a; transform: translateY(-1px); }
+
+    .btn-secondary {
+      border: 1px solid var(--white-15);
+      color: var(--white);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 15px 28px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.3;
+    }
+
+    .scroll-hint span { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; }
+
+    .scroll-line {
+      width: 1px; height: 32px;
+      background: var(--white);
+      animation: scrollline 1.8s infinite;
+    }
+
+    @keyframes scrollline {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--gold);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stat {
+      padding: 20px 12px;
+      text-align: center;
+      border-right: 1px solid rgba(8,8,8,0.15);
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 34px;
+      color: var(--dark);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(8,8,8,0.55);
+      margin-top: 4px;
+    }
+
+    /* ── SHARED SECTION STYLES ── */
+    .section-wrap {
+      padding: 80px 32px;
+    }
+
+    .eyebrow {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(34px, 5vw, 50px);
+      line-height: 1.0;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .section-body {
+      font-size: 14px;
+      color: var(--white-45);
+      line-height: 1.75;
+      max-width: 520px;
+      margin-bottom: 40px;
+    }
+
+    /* ── TAB NAV ── */
+    .tab-nav {
+      background: var(--dark-2);
+      border-bottom: 1px solid var(--dark-4);
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      position: sticky;
+      top: 60px;
+      z-index: 50;
+    }
+
+    .tab-nav::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white-45);
+      padding: 18px 28px;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+      font-weight: 500;
+    }
+
+    .tab-btn:hover { color: var(--white); }
+    .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+    /* ── ONLINE COACHING ── */
+    #online { background: var(--dark-2); }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      max-width: 1000px;
+    }
+
+    .package-card {
+      background: var(--dark-3);
+      border: 1px solid var(--dark-5);
+      border-radius: 6px;
+      padding: 28px 24px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .package-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .package-card:hover { transform: translateY(-4px); border-color: #333; }
+    .package-card:hover::after { transform: scaleX(1); }
+
+    .package-card.featured {
+      border-color: var(--gold-border);
+      background: linear-gradient(135deg, #141414 0%, #111008 100%);
+    }
+
+    .package-card.featured::after { transform: scaleX(1); }
+
+    .package-badge {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--dark);
+      background: var(--gold);
+      padding: 4px 10px;
+      border-radius: 2px;
+      width: fit-content;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .package-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: var(--white);
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .package-price {
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .package-price sup {
+      font-size: 16px;
+      font-weight: 500;
+      vertical-align: super;
+    }
+
+    .package-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--dark-5);
+      margin-bottom: 20px;
+    }
+
+    .package-cta {
+      margin-top: auto;
+      display: inline-block;
+      background: transparent;
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 11px 20px;
+      border-radius: 2px;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .package-cta:hover { background: var(--gold); color: var(--dark); }
+
+    .package-card.featured .package-cta {
+      background: var(--gold);
+      color: var(--dark);
+      border-color: var(--gold);
+    }
+
+    .package-card.featured .package-cta:hover { background: #b8955a; }
+
+    /* ── IN-PERSON ── */
+    #inperson { background: var(--dark); }
+
+    .inperson-inner {
+      max-width: 680px;
+    }
+
+    .inperson-block {
+      background: var(--dark-3);
+      border: 1px solid var(--dark-5);
+      border-radius: 6px;
+      padding: 32px;
+      margin-bottom: 16px;
+    }
+
+    .inperson-block-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: var(--gold);
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .inperson-block p {
+      font-size: 14px;
+      color: var(--white-45);
+      line-height: 1.75;
+    }
+
+    .inperson-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .inperson-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--dark-2);
+      border: 1px solid var(--dark-5);
+      border-radius: 4px;
+      padding: 12px 16px;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .inperson-meta-icon { font-size: 20px; flex-shrink: 0; }
+
+    .inperson-meta-label {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white-28);
+      margin-bottom: 3px;
+    }
+
+    .inperson-meta-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .inperson-meta-value span { color: var(--gold); }
+
+    /* ── ABOUT ── */
+    #about { background: var(--dark-2); }
+
+    .about-inner { max-width: 760px; }
+
+    .about-header {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-avatar {
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      background: var(--dark-3);
+      border: 2px solid var(--gold-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .about-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 38px;
+      color: var(--white);
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .about-title-tag {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .about-tagline {
+      font-size: 14px;
+      color: var(--white-45);
+      line-height: 1.6;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .about-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .about-col-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      color: var(--gold);
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--dark-5);
+    }
+
+    .about-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .about-list li {
+      font-size: 13px;
+      color: var(--white-45);
+      line-height: 1.5;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .about-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 5px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .about-philosophy {
+      background: var(--dark-3);
+      border-left: 2px solid var(--gold);
+      padding: 24px 28px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .about-philosophy-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      color: var(--white);
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .about-philosophy p {
+      font-size: 14px;
+      color: var(--white-45);
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    .about-philosophy p:last-child { margin-bottom: 0; }
+
+    /* ── FAQ ── */
+    #faq { background: var(--dark); }
+
+    .faq-inner { max-width: 680px; }
+
+    .faq-item {
+      border-bottom: 1px solid var(--dark-4);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: left;
+      padding: 22px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover { color: var(--gold); }
+
+    .faq-icon {
+      width: 22px; height: 22px;
+      border: 1px solid var(--dark-5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 14px;
+      color: var(--gold);
+      transition: transform 0.3s;
+    }
+
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-item.open .faq-question { color: var(--gold); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s;
+    }
+
+    .faq-item.open .faq-answer { max-height: 400px; }
+
+    .faq-answer-inner {
+      font-size: 14px;
+      color: var(--white-45);
+      line-height: 1.75;
+      padding-bottom: 22px;
+    }
+
+    /* ── LOCATION STRIP ── */
+    .location-strip {
+      background: var(--dark-3);
+      border-top: 1px solid var(--dark-4);
+      border-bottom: 1px solid var(--dark-4);
+      padding: 32px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .loc-pin { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+
+    .loc-title {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .loc-body {
+      font-size: 13px;
+      color: var(--white-45);
+      line-height: 1.7;
+    }
+
+    .loc-body strong { color: var(--gold); font-weight: 500; }
+
+    .loc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .loc-tag {
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      padding: 5px 12px;
+      border-radius: 2px;
+    }
+
+    /* ── FOOTER CTA ── */
+    .footer-cta {
+      background: var(--gold);
+      padding: 80px 32px;
+      text-align: center;
+    }
+
+    .footer-cta-eyebrow {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(8,8,8,0.5);
+      margin-bottom: 14px;
+    }
+
+    .footer-cta-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(36px, 6vw, 54px);
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .footer-cta-sub {
+      font-size: 13px;
+      color: rgba(8,8,8,0.55);
+      margin-bottom: 32px;
+    }
+
+    .btn-dark {
+      background: var(--dark);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      border-radius: 2px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .btn-dark:hover { background: #111; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid var(--dark-4);
+      padding: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: var(--gold);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--white-28);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-copy {
+      font-size: 11px;
+      color: var(--white-28);
+      width: 100%;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 700px) {
+      nav { padding: 0 18px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+
+      .hero-content { padding: 0 20px; }
+      .section-wrap { padding: 56px 20px; }
+
+      .packages-grid { grid-template-columns: 1fr; }
+      .about-cols { grid-template-columns: 1fr; }
+
+      .tab-btn { padding: 16px 18px; font-size: 10px; }
+
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+      .footer-cta { padding: 56px 20px; }
+      .location-strip { padding: 24px 20px; }
+
+      .inperson-meta { flex-direction: column; }
+      .inperson-meta-item { min-width: unset; }
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#">Rousset Tennis Lab</a>
+    <ul class="nav-links">
+      <li><a href="#online">Online Coaching</a></li>
+      <li><a href="#inperson">In-Person</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://roussettennislab.squarespace.com/appointments" class="nav-book">Book Now</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#online" class="mobile-link">Online Coaching</a>
+    <a href="#inperson" class="mobile-link">In-Person</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="https://roussettennislab.squarespace.com/appointments" class="mobile-book">Book Now</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span class="hero-badge-text">Data-Driven Coaching</span>
+      </div>
+      <h1 class="hero-title">Tennis<br>Elevated<br>by <span>Science</span></h1>
+      <p class="hero-sub">Precision match analysis &amp; coaching for competitive players. Based in Omaha, NE — coaching athletes worldwide online.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="#online">View Packages</a>
+        <a class="btn-secondary" href="#about">Meet Nicolas</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat reveal">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Sessions</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">30+</div>
+      <div class="stat-label">Countries</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">98%</div>
+      <div class="stat-label">Satisfaction</div>
+    </div>
+  </div>
+
+  <!-- TAB NAV -->
+  <div class="tab-nav">
+    <a class="tab-btn active" href="#online">Online Coaching</a>
+    <a class="tab-btn" href="#inperson">In-Person Coaching</a>
+    <a class="tab-btn" href="#about">About</a>
+    <a class="tab-btn" href="#faq">FAQ</a>
+  </div>
+
+  <!-- ONLINE COACHING -->
+  <section id="online">
+    <div class="section-wrap">
+      <div class="eyebrow">Online Coaching</div>
+      <h2 class="section-title">Match Analysis<br>Packages</h2>
+      <p class="section-body">Submit your match footage and receive a detailed, data-backed breakdown of your game. Available to players worldwide.</p>
+
+      <div class="packages-grid">
+
+        <a class="package-card reveal" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/basic-service-tsr6b">
+          <div class="package-name">Match Analysis</div>
+          <div class="package-name" style="font-size:15px;font-family:'DM Sans',sans-serif;font-weight:300;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;font-size:11px;">Essential</div>
+          <div class="package-price"><sup>$</sup>99</div>
+          <div class="package-divider"></div>
+          <a class="package-cta" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/basic-service-tsr6b">Get Started →</a>
+        </a>
+
+        <a class="package-card reveal" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/intermediate-service-brsjs">
+          <div class="package-name">Match Analysis</div>
+          <div style="font-size:11px;font-weight:300;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;">Performance</div>
+          <div class="package-price"><sup>$</sup>149</div>
+          <div class="package-divider"></div>
+          <a class="package-cta" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/intermediate-service-brsjs">Get Started →</a>
+        </a>
+
+        <a class="package-card featured reveal" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/advanced-service-2za7n">
+          <div class="package-badge">Most Popular</div>
+          <div class="package-name">Match Analysis</div>
+          <div style="font-size:11px;font-weight:300;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;">Elite</div>
+          <div class="package-price"><sup>$</sup>219</div>
+          <div class="package-divider"></div>
+          <a class="package-cta" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/advanced-service-2za7n">Get Started →</a>
+        </a>
+
+        <a class="package-card reveal" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/advanced-service-1-hldh9">
+          <div class="package-name">Lab Pro</div>
+          <div style="font-size:11px;font-weight:300;color:var(--white-45);margin-top:-6px;margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;">Package</div>
+          <div class="package-price"><sup>$</sup>349</div>
+          <div class="package-divider"></div>
+          <a class="package-cta" href="https://roussettennislab.squarespace.com/matchanaylis-page/p/advanced-service-1-hldh9">Get Started →</a>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- IN-PERSON COACHING -->
+  <section id="inperson">
+    <div class="section-wrap">
+      <div class="eyebrow">In-Person Coaching</div>
+      <h2 class="section-title">On-Court<br>Training</h2>
+
+      <div class="inperson-inner">
+        <div class="inperson-block reveal">
+          <div class="inperson-block-title">What We Offer</div>
+          <p>We provide structured, in-person coaching designed to improve match performance through technical refinement, tactical awareness, and data-informed feedback. Each service level is adjusted to the player's experience and competitive goals.</p>
+        </div>
+
+        <div class="inperson-meta reveal">
+          <div class="inperson-meta-item">
+            <div class="inperson-meta-icon">📍</div>
+            <div>
+              <div class="inperson-meta-label">Location</div>
+              <div class="inperson-meta-value">Champions Run<br><span>Omaha, Nebraska</span></div>
+            </div>
+          </div>
+          <div class="inperson-meta-item">
+            <div class="inperson-meta-icon">💰</div>
+            <div>
+              <div class="inperson-meta-label">Rate</div>
+              <div class="inperson-meta-value"><span>$80</span> per hour</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:28px;">
+          <a class="btn-primary" href="https://roussettennislab.squarespace.com/appointments">Book a Session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-wrap">
+      <div class="eyebrow">About</div>
+
+      <div class="about-inner">
+        <div class="about-header reveal">
+          <div class="about-avatar">NR</div>
+          <div>
+            <div class="about-name">Nicolas Rousset</div>
+            <div class="about-title-tag">Founder · Performance Analyst</div>
+            <div class="about-tagline">Former NCAA Division I competitor and ITA JUCO National Champion.</div>
+          </div>
+        </div>
+
+        <p class="section-body" style="margin-bottom:32px;">Nicolas built Rousset Tennis Lab from firsthand experience competing at the highest levels of collegiate tennis — from national championship runs to SEC dual matches against ranked opponents.</p>
+
+        <div class="about-cols reveal">
+          <div>
+            <div class="about-col-title">Career Highlights</div>
+            <ul class="about-list">
+              <li>ITA JUCO Singles National Champion</li>
+              <li>ITA All-American (Singles &amp; Doubles)</li>
+              <li>4 wins over nationally ranked Division I opponents</li>
+              <li>32 career singles wins at Arkansas</li>
+              <li>35 career doubles wins at Arkansas</li>
+              <li>Key contributor to an NCAA Tournament team</li>
+              <li>Defeated future ATP professional Ben Shelton in doubles</li>
+            </ul>
+          </div>
+          <div>
+            <div class="about-col-title">Coaching Highlights</div>
+            <ul class="about-list">
+              <li>Assistant Coach for NCAA Division I Men's &amp; Women's Tennis</li>
+              <li>Coaching experience at Challenger-level professional tournaments</li>
+              <li>Coached the #1 ranked junior in the Midwest (U12)</li>
+              <li>Guided juniors to the Orange Bowl international tournament</li>
+              <li>Developed state championship-level junior players</li>
+              <li>Mentored athletes who earned full Division I scholarships</li>
+              <li>Coached champions at USTA Level 1 national tournaments</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-philosophy reveal">
+          <div class="about-philosophy-title">The Philosophy</div>
+          <p>Elite performance is not accidental. It's built through structure, clarity, and accountability.</p>
+          <p>After competing at the highest levels of collegiate tennis, Nicolas understands what separates strong players from elite competitors — disciplined decision-making, tactical awareness, and mental composure under pressure.</p>
+          <p>Rousset Tennis Lab delivers structured, objective analysis designed to elevate serious athletes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-wrap">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="section-title">Common<br>Questions</h2>
+
+      <div class="faq-inner">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Who do you work with?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We work with competitive junior players, tournament-level adults, and players who are serious about improving their match performance. Services are tailored to each player's level and goals.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Where are in-person coaching sessions held?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">All in-person coaching sessions are conducted at Champions Run in Omaha, Nebraska. Sessions are billed at a flat rate of $80 per hour.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What makes Rousset Tennis Lab different from other coaching options?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We combine elite competitive experience with data-driven analysis. Every recommendation is backed by objective match data — not guesswork. Nicolas has competed and won at the highest levels of collegiate tennis, and brings that firsthand understanding to every session.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I send match footage?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">After booking, you'll receive instructions to submit your footage via a secure upload link. Most players use their phone camera — no professional recording equipment required.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does it take to receive analysis?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Standard turnaround is 3–5 business days from when footage is received. Rush delivery options may be available — contact us for details.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need full match footage?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">A full match gives us the most complete picture, but we can work with partial footage, practice sets, or specific situations you want analyzed. The more context you provide, the more actionable the feedback.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION STRIP -->
+  <div class="location-strip">
+    <span class="loc-pin">📍</span>
+    <div>
+      <div class="loc-title">Based in Omaha, NE — Coaching Worldwide</div>
+      <p class="loc-body">Rousset Tennis Lab serves competitive players locally in <strong>Omaha, Nebraska</strong> and athletes across <strong>30+ countries</strong> through remote match analysis and online coaching.</p>
+      <div class="loc-tags">
+        <span class="loc-tag">Omaha, NE</span>
+        <span class="loc-tag">Online Worldwide</span>
+        <span class="loc-tag">Juniors Welcome</span>
+        <span class="loc-tag">All Competitive Levels</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER CTA -->
+  <div class="footer-cta">
+    <div class="footer-cta-eyebrow">Get Started Today</div>
+    <div class="footer-cta-title">Ready to Elevate<br>Your Game?</div>
+    <p class="footer-cta-sub">First analysis session — no commitment required</p>
+    <a class="btn-dark" href="https://roussettennislab.squarespace.com/appointments">Book Now →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Rousset Tennis Lab</div>
+    <ul class="footer-links">
+      <li><a href="#online">Online Coaching</a></li>
+      <li><a href="#inperson">In-Person</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://roussettennislab.squarespace.com/contact">Contact</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Rousset Tennis Lab · Omaha, Nebraska · Worldwide Online Coaching</div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    document.querySelectorAll('.mobile-link, .mobile-book').forEach(l => {
+      l.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    // Smooth scroll with offset
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        const t = document.querySelector(this.getAttribute('href'));
+        if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 60, behavior: 'smooth' }); }
+      });
+    });
+
+    // Active tab on scroll
+    const sections = ['online','inperson','about','faq'];
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 120) current = id;
+      });
+      tabBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('href') === '#' + current);
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
