@@ -1067,7 +1067,7 @@
             <li>Written feedback summary (PDF)</li>
             <li><strong>72-hour turnaround</strong></li>
           </ul>
-          <a class="package-cta" href="mailto:nicolasjrousset@gmail.com?subject=Match Analysis Essential - $99">Get Started →</a>
+          <button class="package-cta" onclick="openForm('Match Analysis — Essential', '$99')">Get Started →</button>
         </div>
 
         <!-- PERFORMANCE -->
@@ -1085,7 +1085,7 @@
             <li>Video timestamps with specific clip references</li>
             <li><strong>48-hour turnaround</strong></li>
           </ul>
-          <a class="package-cta" href="mailto:nicolasjrousset@gmail.com?subject=Match Analysis Performance - $149">Get Started →</a>
+          <button class="package-cta" onclick="openForm('Match Analysis — Performance', '$149')">Get Started →</button>
         </div>
 
         <!-- ELITE -->
@@ -1104,7 +1104,7 @@
             <li>30-min video call to walk through findings</li>
             <li><strong>24-hour turnaround</strong></li>
           </ul>
-          <a class="package-cta" href="mailto:nicolasjrousset@gmail.com?subject=Match Analysis Elite - $219">Get Started →</a>
+          <button class="package-cta" onclick="openForm('Match Analysis — Elite', '$219')">Get Started →</button>
         </div>
 
         <!-- LAB PRO -->
@@ -1122,7 +1122,7 @@
             <li>Monthly development report</li>
             <li><strong>Tailored training plan</strong> updated each cycle</li>
           </ul>
-          <a class="package-cta" href="mailto:nicolasjrousset@gmail.com?subject=Lab Pro Package - $349">Get Started →</a>
+          <button class="package-cta" onclick="openForm('Lab Pro Package', '$349')">Get Started →</button>
         </div>
 
       </div>
@@ -1414,6 +1414,81 @@
     <div class="footer-copy">© 2026 Rousset Tennis Lab · Omaha, Nebraska · Worldwide Online Coaching</div>
   </footer>
 
+  <!-- BOOKING MODAL -->
+  <div id="bookingModal" style="display:none;position:fixed;inset:0;z-index:200;align-items:center;justify-content:center;padding:20px;">
+    <div id="modalBackdrop" style="position:absolute;inset:0;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);" onclick="closeForm()"></div>
+    <div style="position:relative;background:#141414;border:1px solid #2a2a2a;border-radius:8px;width:100%;max-width:520px;padding:40px;z-index:1;max-height:90vh;overflow-y:auto;">
+
+      <!-- Close button -->
+      <button onclick="closeForm()" style="position:absolute;top:16px;right:16px;background:none;border:none;color:rgba(255,255,255,0.4);font-size:22px;cursor:pointer;line-height:1;">✕</button>
+
+      <!-- Header -->
+      <div style="margin-bottom:28px;">
+        <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#C8A96E;margin-bottom:8px;">Get Started</div>
+        <div id="modalPackageName" style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#fff;letter-spacing:0.5px;"></div>
+        <div id="modalPackagePrice" style="font-size:22px;color:#C8A96E;font-weight:300;margin-top:4px;"></div>
+      </div>
+
+      <!-- Form -->
+      <div id="bookingForm">
+        <div style="display:flex;flex-direction:column;gap:16px;">
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div>
+              <label style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:6px;">First Name *</label>
+              <input id="fFirstName" type="text" placeholder="John" style="width:100%;background:#0f0f0f;border:1px solid #2a2a2a;border-radius:3px;padding:11px 14px;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;" onfocus="this.style.borderColor='#C8A96E'" onblur="this.style.borderColor='#2a2a2a'"/>
+            </div>
+            <div>
+              <label style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:6px;">Last Name *</label>
+              <input id="fLastName" type="text" placeholder="Smith" style="width:100%;background:#0f0f0f;border:1px solid #2a2a2a;border-radius:3px;padding:11px 14px;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;" onfocus="this.style.borderColor='#C8A96E'" onblur="this.style.borderColor='#2a2a2a'"/>
+            </div>
+          </div>
+
+          <div>
+            <label style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:6px;">Email Address *</label>
+            <input id="fEmail" type="email" placeholder="john@email.com" style="width:100%;background:#0f0f0f;border:1px solid #2a2a2a;border-radius:3px;padding:11px 14px;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;" onfocus="this.style.borderColor='#C8A96E'" onblur="this.style.borderColor='#2a2a2a'"/>
+          </div>
+
+          <div>
+            <label style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:6px;">Player Level *</label>
+            <select id="fLevel" style="width:100%;background:#0f0f0f;border:1px solid #2a2a2a;border-radius:3px;padding:11px 14px;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;cursor:pointer;" onfocus="this.style.borderColor='#C8A96E'" onblur="this.style.borderColor='#2a2a2a'">
+              <option value="" disabled selected>Select your level</option>
+              <option>Beginner / Recreational</option>
+              <option>Competitive Junior</option>
+              <option>USTA 3.5 – 4.0</option>
+              <option>USTA 4.5 – 5.0</option>
+              <option>College / NCAA</option>
+              <option>Professional / Semi-Pro</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:6px;">Tell us about your game</label>
+            <textarea id="fMessage" rows="3" placeholder="What are you currently working on? What are your goals?" style="width:100%;background:#0f0f0f;border:1px solid #2a2a2a;border-radius:3px;padding:11px 14px;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;resize:vertical;" onfocus="this.style.borderColor='#C8A96E'" onblur="this.style.borderColor='#2a2a2a'"></textarea>
+          </div>
+
+          <div id="formError" style="display:none;font-size:12px;color:#e05c5c;padding:10px 14px;background:rgba(224,92,92,0.08);border:1px solid rgba(224,92,92,0.2);border-radius:3px;"></div>
+
+          <button onclick="submitForm()" style="background:#C8A96E;color:#0a0a0a;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:15px;border:none;border-radius:3px;cursor:pointer;transition:background 0.2s;width:100%;" onmouseover="this.style.background='#b8955a'" onmouseout="this.style.background='#C8A96E'">
+            Send Request →
+          </button>
+
+          <p style="font-size:11px;color:rgba(255,255,255,0.25);text-align:center;line-height:1.5;">Nicolas will reply within 24 hours to confirm your session and provide payment details.</p>
+
+        </div>
+      </div>
+
+      <!-- Success state -->
+      <div id="formSuccess" style="display:none;text-align:center;padding:20px 0;">
+        <div style="font-size:40px;margin-bottom:16px;">✅</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#fff;margin-bottom:10px;">Request Sent!</div>
+        <p style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;">Thanks for reaching out. Nicolas will get back to you within 24 hours to confirm your session and next steps.</p>
+        <button onclick="closeForm()" style="margin-top:24px;background:transparent;border:1px solid rgba(200,169,110,0.3);color:#C8A96E;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:11px 28px;border-radius:2px;cursor:pointer;">Close</button>
+      </div>
+
+    </div>
+  </div>
+
   <script>
     // Mobile nav
     const hamburger = document.getElementById('hamburger');
@@ -1460,6 +1535,74 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Modal form
+    function openForm(packageName, price) {
+      document.getElementById('modalPackageName').textContent = packageName;
+      document.getElementById('modalPackagePrice').textContent = price;
+      document.getElementById('bookingForm').style.display = 'block';
+      document.getElementById('formSuccess').style.display = 'none';
+      document.getElementById('formError').style.display = 'none';
+      const modal = document.getElementById('bookingModal');
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeForm() {
+      document.getElementById('bookingModal').style.display = 'none';
+      document.body.style.overflow = '';
+      // Reset form
+      ['fFirstName','fLastName','fEmail','fMessage'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('fLevel').selectedIndex = 0;
+    }
+
+    function submitForm() {
+      const firstName = document.getElementById('fFirstName').value.trim();
+      const lastName  = document.getElementById('fLastName').value.trim();
+      const email     = document.getElementById('fEmail').value.trim();
+      const level     = document.getElementById('fLevel').value;
+      const message   = document.getElementById('fMessage').value.trim();
+      const pkg       = document.getElementById('modalPackageName').textContent;
+      const price     = document.getElementById('modalPackagePrice').textContent;
+      const errEl     = document.getElementById('formError');
+
+      // Validation
+      if (!firstName || !lastName || !email || !level) {
+        errEl.textContent = 'Please fill in all required fields.';
+        errEl.style.display = 'block';
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errEl.textContent = 'Please enter a valid email address.';
+        errEl.style.display = 'block';
+        return;
+      }
+      errEl.style.display = 'none';
+
+      // Build mailto with all form data
+      const subject = encodeURIComponent(`New Booking Request — ${pkg} (${price})`);
+      const body = encodeURIComponent(
+        `New booking request from your website:\n\n` +
+        `Package: ${pkg} ${price}\n` +
+        `Name: ${firstName} ${lastName}\n` +
+        `Email: ${email}\n` +
+        `Level: ${level}\n` +
+        `Message: ${message || 'No message provided'}\n`
+      );
+
+      window.location.href = `mailto:nicolasjrousset@gmail.com?subject=${subject}&body=${body}`;
+
+      // Show success
+      document.getElementById('bookingForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeForm();
+    });
   </script>
 </body>
 </html>
