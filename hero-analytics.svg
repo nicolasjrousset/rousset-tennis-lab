@@ -1,0 +1,111 @@
+<svg width="100%" viewBox="0 0 680 480" role="img" xmlns="http://www.w3.org/2000/svg">
+  <rect width="680" height="480" fill="#0d1520"/>
+  <rect x="120" y="60" width="440" height="360" fill="#1a3a5c" rx="2"/>
+  <rect x="120" y="60" width="440" height="360" fill="none" stroke="#2a5a8c" stroke-width="2"/>
+  <line x1="120" y1="240" x2="560" y2="240" stroke="#2a5a8c" stroke-width="1.5"/>
+  <line x1="340" y1="60" x2="340" y2="420" stroke="#2a5a8c" stroke-width="1.5"/>
+  <rect x="190" y="150" width="300" height="180" fill="none" stroke="#2a5a8c" stroke-width="1"/>
+  <line x1="340" y1="150" x2="340" y2="330" stroke="#2a5a8c" stroke-width="1"/>
+  <line x1="120" y1="240" x2="560" y2="240" stroke="#4a8abc" stroke-width="3" stroke-dasharray="6,4"/>
+  <ellipse cx="260" cy="320" rx="12" ry="16" fill="#C8A96E" opacity="0.9"/>
+  <line x1="260" y1="336" x2="260" y2="370" stroke="#C8A96E" stroke-width="3" opacity="0.9"/>
+  <line x1="260" y1="345" x2="235" y2="358" stroke="#C8A96E" stroke-width="2.5" opacity="0.9"/>
+  <line x1="260" y1="345" x2="285" y2="338" stroke="#C8A96E" stroke-width="2.5" opacity="0.9"/>
+  <line x1="260" y1="370" x2="245" y2="395" stroke="#C8A96E" stroke-width="2.5" opacity="0.9"/>
+  <line x1="260" y1="370" x2="275" y2="395" stroke="#C8A96E" stroke-width="2.5" opacity="0.9"/>
+  <ellipse cx="292" cy="330" rx="10" ry="13" fill="none" stroke="#C8A96E" stroke-width="2" opacity="0.9"/>
+  <line x1="285" y1="338" x2="292" y2="317" stroke="#C8A96E" stroke-width="2" opacity="0.9"/>
+  <ellipse cx="262" cy="400" rx="20" ry="6" fill="#0d1520" opacity="0.5"/>
+  <path d="M 285 335 Q 390 180 490 145" fill="none" stroke="#C8A96E" stroke-width="2" stroke-dasharray="8,4" opacity="0.8"/>
+  <circle cx="490" cy="145" r="5" fill="#C8A96E" opacity="0.9"/>
+  <path d="M 280 330 Q 300 250 310 165" fill="none" stroke="#4aade8" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+  <circle cx="310" cy="165" r="4" fill="#4aade8" opacity="0.8"/>
+  <path d="M 255 330 Q 220 290 180 260" fill="none" stroke="#e05c5c" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6"/>
+  <circle cx="180" cy="260" r="4" fill="#e05c5c" opacity="0.7"/>
+  <path d="M 270 325 Q 340 140 420 170" fill="none" stroke="#7ad46e" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.6"/>
+  <circle cx="420" cy="170" r="4" fill="#7ad46e" opacity="0.7"/>
+  <circle cx="450" cy="140" r="8" fill="#C8A96E" opacity="0.25"/>
+  <circle cx="450" cy="140" r="4" fill="#C8A96E" opacity="0.5"/>
+  <circle cx="390" cy="160" r="6" fill="#C8A96E" opacity="0.2"/>
+  <circle cx="390" cy="160" r="3" fill="#C8A96E" opacity="0.4"/>
+  <circle cx="310" cy="150" r="5" fill="#4aade8" opacity="0.2"/>
+  <circle cx="310" cy="150" r="2.5" fill="#4aade8" opacity="0.4"/>
+  <circle cx="470" cy="200" r="7" fill="#C8A96E" opacity="0.2"/>
+  <circle cx="470" cy="200" r="3.5" fill="#C8A96E" opacity="0.4"/>
+  <circle cx="350" cy="130" r="4" fill="#7ad46e" opacity="0.2"/>
+  <circle cx="350" cy="130" r="2" fill="#7ad46e" opacity="0.4"/>
+  <circle cx="420" cy="110" r="5" fill="#e05c5c" opacity="0.2"/>
+  <circle cx="420" cy="110" r="2.5" fill="#e05c5c" opacity="0.4"/>
+  <rect x="0" y="0" width="118" height="160" fill="#080e18" opacity="0.88" rx="0"/>
+  <rect x="0" y="0" width="3" height="160" fill="#C8A96E"/>
+  <text x="12" y="20" font-family="Georgia, serif" font-size="11" fill="#C8A96E" letter-spacing="2">MATCH STATS</text>
+  <line x1="12" y1="26" x2="106" y2="26" stroke="#C8A96E" stroke-width="0.5" opacity="0.4"/>
+  <text x="12" y="44" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Serve Win %</text>
+  <text x="106" y="44" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="end">72.1%</text>
+  <text x="12" y="62" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Unforced Err.</text>
+  <text x="106" y="62" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e05c5c" text-anchor="end">11</text>
+  <text x="12" y="80" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Winners</text>
+  <text x="106" y="80" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7ad46e" text-anchor="end">18</text>
+  <text x="12" y="98" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Break Points</text>
+  <text x="106" y="98" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C8A96E" text-anchor="end">3/5</text>
+  <text x="12" y="116" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Net Points</text>
+  <text x="106" y="116" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="end">8/10</text>
+  <text x="12" y="134" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">1st Serve In</text>
+  <text x="106" y="134" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="end">64%</text>
+  <text x="12" y="152" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Avg Rally Len</text>
+  <text x="106" y="152" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="end">4.2</text>
+  <rect x="562" y="0" width="118" height="130" fill="#080e18" opacity="0.88" rx="0"/>
+  <rect x="675" y="0" width="3" height="130" fill="#C8A96E"/>
+  <text x="572" y="20" font-family="Georgia, serif" font-size="11" fill="#C8A96E" letter-spacing="2">SHOT TYPES</text>
+  <line x1="572" y1="26" x2="672" y2="26" stroke="#C8A96E" stroke-width="0.5" opacity="0.4"/>
+  <text x="572" y="46" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Attack</text>
+  <rect x="572" y="50" width="70" height="7" fill="#1a2a3a" rx="2"/>
+  <rect x="572" y="50" width="38" height="7" fill="#C8A96E" rx="2"/>
+  <text x="648" y="58" font-family="Arial, sans-serif" font-size="10" fill="#C8A96E" text-anchor="end">54%</text>
+  <text x="572" y="72" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Neutral</text>
+  <rect x="572" y="76" width="70" height="7" fill="#1a2a3a" rx="2"/>
+  <rect x="572" y="76" width="17" height="7" fill="#4aade8" rx="2"/>
+  <text x="648" y="84" font-family="Arial, sans-serif" font-size="10" fill="#4aade8" text-anchor="end">24%</text>
+  <text x="572" y="98" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Defense</text>
+  <rect x="572" y="102" width="70" height="7" fill="#1a2a3a" rx="2"/>
+  <rect x="572" y="102" width="15" height="7" fill="#e05c5c" rx="2"/>
+  <text x="648" y="110" font-family="Arial, sans-serif" font-size="10" fill="#e05c5c" text-anchor="end">22%</text>
+  <text x="572" y="126" font-family="Georgia, serif" font-size="13" fill="#fff" letter-spacing="1">6-3  4-6  5-3*</text>
+  <rect x="562" y="350" width="118" height="130" fill="#080e18" opacity="0.88" rx="0"/>
+  <rect x="675" y="350" width="3" height="130" fill="#e05c5c"/>
+  <text x="572" y="370" font-family="Georgia, serif" font-size="11" fill="#e05c5c" letter-spacing="2">ERROR ZONES</text>
+  <line x1="572" y1="376" x2="672" y2="376" stroke="#e05c5c" stroke-width="0.5" opacity="0.4"/>
+  <text x="572" y="394" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">BH Cross</text>
+  <text x="670" y="394" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e05c5c" text-anchor="end">32%</text>
+  <text x="572" y="412" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">FH DTL</text>
+  <text x="670" y="412" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e05c5c" text-anchor="end">21%</text>
+  <text x="572" y="430" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">2nd Serve</text>
+  <text x="670" y="430" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e05c5c" text-anchor="end">18%</text>
+  <text x="572" y="448" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Net Approach</text>
+  <text x="670" y="448" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C8A96E" text-anchor="end">9%</text>
+  <text x="572" y="466" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">BH Winner</text>
+  <text x="670" y="466" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7ad46e" text-anchor="end">20%</text>
+  <rect x="0" y="350" width="118" height="130" fill="#080e18" opacity="0.88" rx="0"/>
+  <rect x="0" y="350" width="3" height="130" fill="#7ad46e"/>
+  <text x="12" y="370" font-family="Georgia, serif" font-size="11" fill="#7ad46e" letter-spacing="2">PRESSURE PTS</text>
+  <line x1="12" y1="376" x2="108" y2="376" stroke="#7ad46e" stroke-width="0.5" opacity="0.4"/>
+  <text x="12" y="394" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">30-30 pts won</text>
+  <text x="108" y="394" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7ad46e" text-anchor="end">68%</text>
+  <text x="12" y="412" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Deuce pts won</text>
+  <text x="108" y="412" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7ad46e" text-anchor="end">71%</text>
+  <text x="12" y="430" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">BP saved</text>
+  <text x="108" y="430" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C8A96E" text-anchor="end">4/5</text>
+  <text x="12" y="448" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Closing games</text>
+  <text x="108" y="448" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7ad46e" text-anchor="end">83%</text>
+  <text x="12" y="466" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">3rd set rec.</text>
+  <text x="108" y="466" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7ad46e" text-anchor="end">+61%</text>
+  <rect x="210" y="432" width="260" height="36" fill="#080e18" opacity="0.75" rx="3"/>
+  <circle cx="228" cy="450" r="4" fill="#C8A96E"/>
+  <text x="236" y="454" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">Winner</text>
+  <circle cx="290" cy="450" r="4" fill="#4aade8"/>
+  <text x="298" y="454" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">Neutral</text>
+  <circle cx="352" cy="450" r="4" fill="#e05c5c"/>
+  <text x="360" y="454" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">Error</text>
+  <circle cx="404" cy="450" r="4" fill="#7ad46e"/>
+  <text x="412" y="454" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">Lob</text>
+</svg>
